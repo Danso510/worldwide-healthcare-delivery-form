@@ -1,0 +1,17 @@
+{
+  "name": "Worldwide Healthcare Delivery Form",
+  "short_name": "WH Delivery",
+  "description": "Worldwide Healthcare delivery recording form",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0c1829",
+  "theme_color": "#0229ac",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "img/WHL.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
