@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Beginning of the heading-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worldwide Healthcare</title>
+    <link rel="icon" type="image/png" href="img/WHL.png">
+    <link rel="stylesheet" href="styling/style.css">
+    <!--Linking bootstrap logo-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<!--End of the heading-->
+
+<body>
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+        
+        <form id="delivery-form">
+            
+            <div class="driver">
+                <label for="chk" aria-hidden="true">Driver</label>
+                
+                <div class="waybill-input">
+                    <span>GA0-</span>
+                    <input type="text" name="waybill" placeholder="00000" maxlength="5" pattern="[0-9]{5}" inputmode="numeric" required>
+                </div>
+                
+                <input type="datetime-local" name="txt" required>
+                
+                <select name="transporter" id="transporter" required>
+                    <option value="" disabled selected>Transporter</option>
+                    <option value="UPS">UPS</option>
+                    <option value="Company VAN">Company VAN</option>
+                    <option value="Pickup">Pickup</option>
+                </select>
+                
+                <div id="driver-container">
+                    <select name="driver" id="driver" required>
+                        <option value="" disabled selected>Driver</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="receiver">
+                
+                <label for="chk" aria-hidden="true">Receiver</label>
+
+                <select name="status" id="status" required>
+                    <option value="" disabled selected>Status</option>
+                    <option value="Delivered">Delivered</option>
+                    <option value="Returned">Returned</option>
+                </select>
+
+                <input type="text" name="name" placeholder="Name" required>
+                
+                <div class="contact-input">
+                    <span>+233</span>
+                    <input type="text" name="contact" placeholder="XXXXXXXXX" maxlength="9" pattern="[0-9]{9}" inputmode="numeric" required>
+                </div>
+
+                <button type="submit">Submit</button>
+                <div class="logo-container">
+                    <img src="img/WHL.png" alt="Worldwide Healthcare Logo" class="logo">
+                </div>
+            </div>
+            
+        </form>
+    </div>
+
+    <script src="styling/script.js"></script>
+</body>

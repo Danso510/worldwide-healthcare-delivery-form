@@ -1,0 +1,190 @@
+
+
+*{
+    margin: 0; /*Removing default margin of all elements*/
+    padding: 0; /*Removing default padding o all elements*/
+    box-sizing: border-box; /*Setting size of all elements accoring to border-box model*/
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #0c1829, #0229ac, #02236b);
+}
+
+.main{
+    width: 350px;
+    height: 500px;
+    overflow: hidden;
+    background: url("../img/bg.jpg") center center / cover no-repeat;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+#chk{
+    display: none;
+}
+
+.driver{
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.waybill-input {
+    width: 65%;
+    height: 40px;
+    background: white;
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.waybill-input span {
+    color: #999;
+    padding-left: 10px;
+    font-size: 0.85rem;
+}
+
+.waybill-input input {
+    flex: 1;
+    width: auto;
+    height: 20px;
+    margin: 0;
+    padding: 10px 5px;
+    border: none;
+    outline: none;
+    border-radius: 0;
+}
+
+select {
+    width: 65%;
+    height: 40px;
+    background: white;
+    display: flex;
+    margin: 20px auto;
+    padding: 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: #555;
+}
+
+label{
+    color: #fff;
+    font-size: 2.3rem;
+    justify-content: center;
+    display: flex;
+    margin: 60px 0 30px;;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+input{
+    width: 65%;
+    height: 40px;
+    background: white;
+    display: flex;
+    margin:20px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.contact-input {
+    width: 65%;
+    height: 40px;
+    background: white;
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.contact-input span {
+    color: #999;
+    padding-left: 10px;
+    font-size: 0.85rem
+}
+
+.contact-input input {
+    flex: 1;
+    width: auto;
+    height: 20px;
+    margin: 0;
+    padding: 10px 5px;
+    border: none;
+    outline: none;
+    border-radius: 0;
+}
+
+button{
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: rgb(0, 132, 255);
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    transition: 0.2s ease-in;
+    cursor:pointer;
+}
+
+button:hover{
+    background: rgb(1, 110, 212);
+}
+
+.receiver{
+    height: 460px;
+    background: #eee;
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: 0.8s ease-in-out;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+.receiver label{
+    color: rgb(0, 132, 255);
+    transform: scale(0.6);
+}
+
+#chk:checked ~ #delivery-form .receiver {
+    transform: translateY(-500px);
+}
+
+#chk:checked ~ #delivery-form .receiver label {
+    transform: scale(1);
+}
+
+#chk:checked ~ #delivery-form .driver label {
+    transform: scale(0.6);
+}
+
