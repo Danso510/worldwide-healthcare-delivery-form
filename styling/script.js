@@ -66,3 +66,24 @@ checkbox.addEventListener("change", function () {
         }
     }
 });
+
+
+document
+  .getElementById("delivery-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = {
+      waybill: "GA0-" + document.querySelector('[name="waybill"]').value,
+      deliveryDateTime: document.querySelector('[name="txt"]').value,
+      transporter: document.querySelector('[name="transporter"]').value,
+      driver: document.querySelector('[name="driver"]').value,
+      status: document.querySelector('[name="status"]').value,
+      receiverName: document.querySelector('[name="name"]').value,
+      contact: "+233" + document.querySelector('[name="contact"]').value
+    };
+
+    console.log(formData);
+
+    alert("Form submitted successfully.");
+  });
