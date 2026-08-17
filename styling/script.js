@@ -70,7 +70,8 @@ checkbox.addEventListener("change", function () {
 
 document
   .getElementById("delivery-form")
-  .addEventListener("submit", function (e) {
+  .addEventListener("submit", async function (e) {
+
     e.preventDefault();
 
     const formData = {
@@ -83,7 +84,37 @@ document
       contact: "+233" + document.querySelector('[name="contact"]').value
     };
 
-    console.log(formData);
+    try {
 
-    alert("Form submitted successfully.");
+      const response = await fetch(
+        https://script.google.com/macros/s/AKfycbzvK7XIk4sXNuy7oPpyvyHaJLED5RTdUtvQq6BCRLSwmatdSZToh-dgVqlHLM9GOVR08A/exec,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(formData)
+        }
+      );
+
+      const result = await response.json();
+
+      if (result.result === "success") {
+
+        alert("Delivery submitted successfully!");
+
+        document.getElementById("delivery-form").reset();
+
+        document.getElementById("chk").checked = false;
+
+      }
+
+    } catch (error) {
+
+      console.error(error);
+
+      alert("Submission failed.");
+
+    }
+
   });
